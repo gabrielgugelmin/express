@@ -9,34 +9,34 @@ To run the project, run `yarn` to install all the dependencies and
 
 # Available routes
 
-- GET "`base_url`/projects"
+- GET "`base_url`/projects"  
   Get all existing projects
 
-- POST "`base_url`/projects"
-  Add new project
-  body: {
-  "id": Number,
-  "title": String
+- POST "`base_url`/projects"  
+  Add new project  
+  body: {  
+  "id": Number,  
+  "title": String  
   }
 
-- POST "`base_url`/projects/:id/tasks
-  Create new task for specific project
-  params: :id / project id
+- POST "`base_url`/projects/:id/tasks  
+  Create new task for specific project  
+  params: :id / project id  
   body: {"title": String }
 
-- PUT "`base_url`projects/:id"
-  Edit project's title
-  params: :id / project id
+- PUT "`base_url`projects/:id"  
+  Edit project's title  
+  params: :id / project id  
   body: { "title": String }
 
-* DELETE "`base_url`/projects/:id"
-  Remove project with given id
+* DELETE "`base_url`/projects/:id"  
+  Remove project with given id  
   params: :id / project id
 
 # Middlewares
 
-- projectExists
+- projectExists  
   Check if project with given id exists, if not return error 400.
 
-- logRequests
+- logRequests  
   Count how many requisitions were made and log on console.
